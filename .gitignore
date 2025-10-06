@@ -20,7 +20,6 @@ buildNumber.properties
 .classpath
 
 # Ignore added translation base js files
-**/*.js
 
 # IntelliJ
 .idea
