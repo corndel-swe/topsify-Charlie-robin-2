@@ -16,6 +16,7 @@ public class Main {
         try {
             List<User> users = jsonFileReader.readJsonArray("users.json", new TypeReference<List<User>>() {
             });
+            users.forEach(System.out::println);
             sqlFileWriter.writeUsersToSQL(users, "./db/seeds/users.sql");
         } catch (RuntimeException e) {
             throw new RuntimeException(e);
