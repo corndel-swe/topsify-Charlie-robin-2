@@ -15,6 +15,8 @@ do
   test_result=$?;
   echo Exercise $arg $([[ $test_result -eq 0 ]] && echo "Pass ✅" || echo "Fail ❌");
   overall_result=$(($overall_result|$test_result))
+
+
 done
 
 exit $overall_result
