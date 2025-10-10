@@ -3,7 +3,7 @@ package com.topsify.cli.models;
 
 import com.topsify.cli.utils.SQLInsertable;
 
-public class User implements SQLInsertable {
+public class User implements SQLInsertable, Comparable<User> {
 
     public static String TABLE = "users";
 
@@ -83,6 +83,16 @@ public class User implements SQLInsertable {
                 email,
                 avatar,
                 password);
+    }
+
+    @Override
+    public int compareTo(User user) {
+        // NATURAL SORTING OF AN OBJECT
+        // +1
+        // 0
+        // -1
+
+        return last_name.compareTo(user.getLast_name());
     }
 }
 

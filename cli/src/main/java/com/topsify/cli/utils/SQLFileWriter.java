@@ -12,6 +12,7 @@ public class SQLFileWriter {
             for (T toInsert : insertable) {
                 writer.append(toInsert.getSQLInsert());
             }
+
         } catch (IOException exception) {
             throw new RuntimeException("Failed to write to SQL file: " + outputFileName, exception);
         }
